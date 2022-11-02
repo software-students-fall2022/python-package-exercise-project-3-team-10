@@ -23,6 +23,6 @@ def convertDistance(num, unit1, unit2):
                    "m": {"in": 39.3701, "ft": 3.28084, "mi": 1/1609.34, "mm": 1000, "cm": 100, "km": 1e-3},
                    "km": {"in": 39370.1, "ft": 3280.84, "mi": 1/1.60934, "mm": 1e6, "cm": 1e5, "m": 1000}}
     if unit1 in units and unit2 in units:
-        return num * conversions[unit1][unit2]
+        return str(float(num) * conversions[unit1][unit2])
     else:
         return "Invalid unit"
