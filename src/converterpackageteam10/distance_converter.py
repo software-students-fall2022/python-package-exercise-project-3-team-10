@@ -1,5 +1,3 @@
-import math
-
 # def inches_to_centimeters(inches):
 #     return float(inches) * 2.54
 
