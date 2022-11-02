@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "converter"
+name = "converterpackageteam10"
 description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
 version = "0.0.7"
 authors = [
@@ -24,5 +24,9 @@ classifiers = [
 dev = ["pytest"]
 
 [project.urls]
+"Homepage" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10"
+"Repository" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10.git"
+"Bug Tracker" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10/issues"
 
 [project.scripts]
+distance_converter = "distance_converter.__main__:main"
