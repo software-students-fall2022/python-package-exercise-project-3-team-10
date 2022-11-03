@@ -20,8 +20,12 @@ __conversions = {
 }
 
 def allowed_conversions():
-    return 
-
+    print("These are the allowed unit inputs for the convert_distance method: ")
+    li = []
+    for k, v in __alias_units.items():
+        li += [f'{k:<10} --> {v}']
+    print("\n".join(li))
+    return list(__units)
 
 def convert_distance(num, unit1, unit2):
     if unit1 in __units:
@@ -34,4 +38,4 @@ def convert_distance(num, unit1, unit2):
 
 class UnitNotFound(Exception):
     def __init__(self, unit):
-        super().__init__("The unit " + str(unit) + " is not listed as a valid convertible.")
+        super().__init__("The unit " + str(unit) + " is not listed as a valid convertible. Use allowed_conversions to get a list of allowed conversions.")
