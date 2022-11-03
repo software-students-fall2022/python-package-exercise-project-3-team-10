@@ -13,7 +13,7 @@
 # def mile_to_kilometer(mile):
 #     return float(mile) * 1.60935
 
-def convertDistance(num, unit1, unit2):
+def convert_distance(num, unit1, unit2):
     units = {"in", "ft", "mi", "mm", "cm", "m", "km"}
     conversions = {"in": {"ft": 1/12, "mi": 1/63360, "mm": 25.4, "cm": 2.54, "m": 0.0254, "km": 2.54e-5}, 
                    "ft": {"in": 12, "mi": 1/5280, "mm": 304.8, "cm": 30.48, "m": 0.3048, "km": 3.048e-4},
