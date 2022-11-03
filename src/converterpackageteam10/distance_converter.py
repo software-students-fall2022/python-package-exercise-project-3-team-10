@@ -15,6 +15,7 @@
 
 def convert_distance(num, unit1, unit2):
     units = {"in", "ft", "mi", "mm", "cm", "m", "km"}
+    # variation_units = {"inches": "in", "feet": "ft", "mile", "milimeter", "centimeter", "meter", "kilometer"}
     conversions = {"in": {"ft": 1/12, "mi": 1/63360, "mm": 25.4, "cm": 2.54, "m": 0.0254, "km": 2.54e-5}, 
                    "ft": {"in": 12, "mi": 1/5280, "mm": 304.8, "cm": 30.48, "m": 0.3048, "km": 3.048e-4},
                    "mi": {"in": 63360, "ft": 5280, "mm": 1609340, "cm": 160934, "m": 1609.34, "km": 1.60934},
