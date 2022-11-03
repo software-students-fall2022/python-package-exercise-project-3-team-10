@@ -46,6 +46,12 @@ class TestDistanceConverter:
         except Exception as e:
             assert True
 
+    def test_allowed_conversions(self):
+        expectedList = ["in", "ft", "mi", "mm", "cm", "m", "km"]
+        actualList = distance_converter.allowed_conversions()
+        for actual in actualList:
+            assert actual in expectedList, "The expectedList does not have the following unit: " + actual
+
 
     def test_convert_inches_to_other(self):
         # Note: We assume that only the conversion of inches exist.
