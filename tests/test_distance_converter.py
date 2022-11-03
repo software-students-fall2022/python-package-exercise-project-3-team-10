@@ -12,7 +12,7 @@ class Tests:
         actual = distance_converter.convert_distance("1000", "m", "km")
         expected = "1.0"
         assert actual == expected, "Expected conversion of 1000 meter to equal 1 kilometer"
-    def test_convert_meter_to_kilometer(self):
+    def test_convert_meter_to_kilometer_1(self):
         actual = distance_converter.convert_distance("1000", "meter", "kilometer")
         expected = "1.0"
         assert actual == expected, "Expected conversion of 1000 meter to equal 1 kilometer"
