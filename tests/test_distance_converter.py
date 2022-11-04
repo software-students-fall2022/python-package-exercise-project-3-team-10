@@ -60,11 +60,11 @@ class TestDistanceConverter:
         numList = [1]
         resultList = [1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
@@ -76,11 +76,11 @@ class TestDistanceConverter:
         numList = [1, 1]
         resultList = [12, 1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
@@ -92,11 +92,11 @@ class TestDistanceConverter:
         numList = [1, 1]
         resultList = [63360, 5280, 1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
@@ -108,11 +108,11 @@ class TestDistanceConverter:
         numList = [25.4, 304.8, 1609344, 1]
         resultList = [1, 1, 1, 1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
@@ -124,11 +124,11 @@ class TestDistanceConverter:
         numList = [2.54, 30.48, 160934.4, 1, 1]
         resultList = [1, 1, 1, 10, 1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
@@ -140,11 +140,11 @@ class TestDistanceConverter:
         numList = [.254, 3.048, 16093.44, .01, .1, 1]
         resultList = [10, 10, 10, 10, 10, 1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
@@ -156,11 +156,11 @@ class TestDistanceConverter:
         numList = [1, 1, 1.609344, 1, 1, 1, 1]
         resultList = [39370.1, 3280.84, 1, 1000000, 100000, 1000, 1]
         for num, unit2, res in zip(numList, unit2List, resultList):
-            #First, test the conversion from unit1 -> u2
+            #First, test the conversion from unit1 -> unit2
             expected = distance_converter.convert_distance(num, unit1, unit2)
             actual = res
             assert abs(actual-expected) <= TestDistanceConverter.tol, "The conversion of " + unit1 + " to " + unit2 + " fails"
-            #Then, make sure the conversion from u2 -> unit1 also works out.
+            #Then, make sure the conversion from unit2 -> unit1 also works out.
             rev_expected = distance_converter.convert_distance(res, unit2, unit1)
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
