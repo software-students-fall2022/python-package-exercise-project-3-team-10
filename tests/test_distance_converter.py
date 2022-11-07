@@ -1,5 +1,5 @@
 import pytest
-from converterpackageteam10 import distance_converter
+from src.converterpackageteam10 import distance_converter
 
 class TestDistanceConverter:
     #This is the tolerance for the conversions. Since conversions will result in 
@@ -48,7 +48,7 @@ class TestDistanceConverter:
 
     def test_allowed_conversions(self):
         expectedList = ["in", "ft", "mi", "mm", "cm", "m", "km"]
-        actualList = distance_converter.allowed_conversions()
+        actualList = distance_converter.allowed_distance_conversions()
         for actual in actualList:
             assert actual in expectedList, "The expectedList does not have the following unit: " + actual
 

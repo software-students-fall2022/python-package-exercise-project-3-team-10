@@ -19,7 +19,7 @@ __conversions = {
     "km": {"in": 39370.1, "ft": 3280.84, "mi": 1/1.609344, "mm": 1e6, "cm": 1e5, "m": 1000, "km": 1}
 }
 
-def allowed_conversions():
+def allowed_distance_conversions():
     print("These are the allowed unit inputs for the convert_distance method: ")
     li = []
     for k, v in __alias_units.items():
