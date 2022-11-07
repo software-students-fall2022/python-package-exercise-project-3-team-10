@@ -6,3 +6,16 @@
 # Python Package Exercise
 
 A little exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
+
+# Code Examples
+
+## Distance Converter
+
+* The following line will give all the conversions for distances that are available:
+    ```
+    >> distance_converter.allowed_distance_conversions()
+    ```
+* The following line will convert 10 feet into inches:
+    ```
+    >> print(distance_converter.convert_distance(10, 'ft', 'in'))
+    ```
