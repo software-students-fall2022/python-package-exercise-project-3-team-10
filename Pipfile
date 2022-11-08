@@ -6,8 +6,6 @@ name = "pypi"
 [packages]
 pytz = "*"
 pytest = "*"
-build = "*"
-twine = "*"
 converterpackageteam10 = {editable = true, path = "."}
 
 [dev-packages]
