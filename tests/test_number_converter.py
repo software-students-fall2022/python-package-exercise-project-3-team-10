@@ -1,5 +1,5 @@
 import pytest
-from src.converterpackageteam10 import number_converter
+from converterpackageteam10 import number_converter
 
 def test_decimal_to_binary():
     expected = '0b1010'
