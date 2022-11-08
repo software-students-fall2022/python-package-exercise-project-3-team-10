@@ -24,4 +24,4 @@ jobs:
           pipenv install -e .
       - name: Test with pytest
         run: |
-          pytest
+          pipenv shell pytest
