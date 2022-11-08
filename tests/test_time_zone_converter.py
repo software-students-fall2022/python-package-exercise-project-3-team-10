@@ -1,5 +1,5 @@
 import pytest
-from src.converterpackageteam10 import time_zone_converter
+from converterpackageteam10 import time_zone_converter
 
 class Test:
     def test_invalid_input(self):
