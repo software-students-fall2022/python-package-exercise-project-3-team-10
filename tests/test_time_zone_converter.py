@@ -3,6 +3,7 @@ from converterpackageteam10 import time_zone_converter
 import pytz
 from datetime import datetime
 
+
 class Test:
     def test_exception_raised(self):
         #check if KeyError exception was raised
@@ -50,4 +51,6 @@ class Test:
         #check if returned value is of type dict
         actual = time_zone_converter.convert_timezone("PR")
         assert isinstance(actual,dict),"Expected output to be of type dictionary"
-    
+    def test_correct_output(self):
+        actual = time_zone_converter.convert_timezone("US")
+        assert actual[datetime.now().strftime('%I:%M')] == "America/New_York", "Expected function to return the list of unique timezones in US an for the current time to be America/New_York"
