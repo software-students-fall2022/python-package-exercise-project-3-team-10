@@ -19,4 +19,3 @@ A little exercise to create a Python package, build it, test it, distribute it, 
     ```
     >> print(distance_converter.convert_distance(10, 'ft', 'in'))
     ```
-Testing new security feature of github.
