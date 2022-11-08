@@ -14,15 +14,61 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * 
 * 
 
+# Import the Project
+
+* Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)
+
+# Contribute to this Project
+
+* Open bash terminal
+* Clone this repository
+    ```
+    git clone https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10.git
+    ```
+* Get into the project directory
+    ```
+    cd python-package-exercise-project-3-team-10
+    ```
+* Create new virtual environment
+    ```
+    python -m venv .venv
+    ```
+* Activate the environment
+    ```
+    source .venv/Scripts/activate
+    ```
+
 # Code Examples
+
+## Age Converter
 
 ## Distance Converter
 
-* The following line will give all the conversions for distances that are available:
+* The following line will print and give all the conversions for distances that are available:
     ```
-    >> distance_converter.allowed_distance_conversions()
+    >> li = distance_converter.allowed_distance_conversions()
+    These are the allowed unit inputs for the convert_distance method: 
+    inches     --> in
+    feet       --> ft
+    mile       --> mi
+    milimeter  --> mm
+    centimeter --> cm
+    meter      --> m
+    kilometer  --> km
+    >> print(li)
+    ['mm', 'm', 'mi', 'cm', 'in', 'km', 'ft']
     ```
 * The following line will convert 10 feet into inches:
     ```
     >> print(distance_converter.convert_distance(10, 'ft', 'in'))
+    120.0
     ```
+* The following line will convert 100 centimeters into meters:
+    ```
+    >> print(distance_converter.convert_distance(100, 'cm', 'm'))
+    1.0
+    ```
+
+## Number Converter
+
+## Time Zone Converter
