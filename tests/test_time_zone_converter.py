@@ -51,7 +51,4 @@ class Test:
         #check if returned value is of type dict
         actual = time_zone_converter.convert_timezone("PR")
         assert isinstance(actual,dict),"Expected output to be of type dictionary"
-    def test_correct_output(self):
-        time = datetime.now().strftime('%I:%M')
-        actual = time_zone_converter.convert_timezone("US")
-        assert (actual[time] == "America/New_York"), "Expected function to return the list of unique timezones in US an for the current time to be America/New_York"
+    
