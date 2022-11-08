@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytz = "*"
+pytest = "*"
+build = "*"
+twine = "*"
+converterpackageteam10 = {editable = true, path = "."}
+
+[dev-packages]
+
+[requires]
+python_version = "3"

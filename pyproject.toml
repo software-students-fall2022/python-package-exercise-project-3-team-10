@@ -7,7 +7,7 @@ name = "converterpackageteam10"
 description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
 version = "0.0.7"
 authors = [
-  { name="Jonason Wu", email="jw5911@nyu.edu" },
+  { name="Jonason Wu", email="jw5911@nyu.edu" },{ name="Alejandro Olazabal", email="ajo351@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
@@ -19,14 +19,12 @@ classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
 ]
-
+dependencies = [
+    "pytz",
+]
 [project.optional-dependencies]
-dev = ["pytest"]
-
-[project.urls]
-"Homepage" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10"
-"Repository" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10.git"
-"Bug Tracker" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10/issues"
+dev = ["pytest","pipenv"]
 
 [project.scripts]
 distance_converter = "distance_converter.__main__:main"
+time_zone_converter = "time_zone_converter.__main__:main"
