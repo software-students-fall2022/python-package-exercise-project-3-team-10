@@ -1,5 +1,5 @@
 import pytest
-from src.converterpackageteam10 import age_converter
+from converterpackageteam10 import age_converter
 import re
 
 class Test_Age_Calc:
@@ -11,7 +11,7 @@ class Test_Age_Calc:
 
     def test_valid_out_age_calc(self):
         result = age_converter.calc_age("Dec 18 2001 10:07AM", "seconds")
-        assert(result, str), f"Expected {result} to be a string!"
+        assert isinstance(result, str), f"Expected {result} to be a string!"
     
     def test_valid_out_age_calc2(self):
         units = {"actual","years", "months", "weeks", "days", "hours", "minutes", "seconds"}
