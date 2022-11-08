@@ -3,6 +3,8 @@ from datetime import datetime
 import pytz #need pip install
 
 def convert_timezone(code): #input is country’s ISO Alpha 2 code
+    ''' given the country's ISO Alpha 2 code, returns a dictionary ... '''
+
     if code not in pytz.country_timezones:
         raise KeyError('Expected valid ISO Alpha 2 code but got ' +  code)
     timezones = pytz.country_timezones[code]

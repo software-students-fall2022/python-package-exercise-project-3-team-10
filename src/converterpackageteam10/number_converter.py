@@ -1,4 +1,9 @@
+
 def convert_number(to_numeral_system, number):
+    ''' converts a number into the to_numeral_system indicated 
+        Note: The number could be in binary, octal, decimal, or hexadecimal form.
+    '''
+
     numeral_systems = ["binary", "octal", "decimal", "hexadecimal"]
     if to_numeral_system not in numeral_systems:
         raise ValueError("Invalid numeral system")

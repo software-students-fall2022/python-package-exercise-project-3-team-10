@@ -1,9 +1,9 @@
 import datetime
 from datetime import datetime
 
-
-
 def calc_age(dob, unit):
+    """ Given a date of birth, returns a conversion based on the unit desired. """
+
     try:
         my_dob = datetime.strptime(str(dob), "%b %d %Y %I:%M%p")
     except ValueError:
@@ -53,6 +53,8 @@ def calc_age(dob, unit):
         return "Invalid input"
 
 def help():
+    """Provides some help with using the calc_age function to the user"""
+
     return "Age_converter.calc_age: \n\tYou can use the following units: \n\t" + "help, actuall, years, months, weeks, days, hours, minutes, seconds" + "\n\t" + "Example: calc_age('Jan 1 2000 1:33PM', 'years')"
 
 
