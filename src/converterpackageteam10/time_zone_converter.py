@@ -4,7 +4,7 @@ import pytz #need pip install
 
 def convert_timezone(code): #input is country’s ISO Alpha 2 code
     if code not in pytz.country_timezones:
-        raise KeyError(f'Expected valid ISO Alpha 2 code but got {code}')
+        raise KeyError('Expected valid ISO Alpha 2 code but got ' +  code)
     timezones = pytz.country_timezones[code]
     fmt = '%I:%M'
     utc = datetime.now(pytz.timezone("UTC"))
@@ -14,7 +14,5 @@ def convert_timezone(code): #input is country’s ISO Alpha 2 code
         if converted not in res:
             res[converted] =  timezone
     return res
-
-
 
 

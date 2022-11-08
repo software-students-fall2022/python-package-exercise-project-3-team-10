@@ -1,8 +1,9 @@
 import pytest
 from converterpackageteam10 import time_zone_converter
+import pytz
 
 class Test:
-    def test_invalid_input(self):
+    def test_exception_raised(self):
         with pytest.raises(KeyError) as excinfo:
             time_zone_converter.convert_timezone("XX")
         msg = excinfo.value.args[0]
@@ -35,3 +36,9 @@ class Test:
                 "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"]
         for iso in isos:
             assert len(time_zone_converter.convert_timezone(iso)) >= 1
+
+    def test_valid_output(self):
+        expected = pytz.country_timezones["US"]
+        timezones = time_zone_converter.convert_timezone("US").values()
+        for timezone in timezones:
+            assert(timezone in expected)
