@@ -24,13 +24,30 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * age_converter, number_converter, time_zone_converter, distance_converter
 
 ## How to Install:
-> `pip install -i https://test.pypi.org/simple/ converterpackageteam10==1.0.0`
+For Windows:
+> Create a `pipenv`-managed virtual environment<br>
+> `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
+
+For Linux:
+>`python3 -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
 
 ## Possible imports
 * `from converterpackageteam10 import age_converter`
+    * `age_converter.calc_age("arg*", "arg**")`
+        * args: 1: (Date Of Birth), 2: (age calculation unit('actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds'))
+    * `age_converter.help()`
+        * args: None
 * `from converterpackageteam10 import number_converter`
+    * `number_converter.convert_number("arg*", "arg**")`
+        * args: 1: (conversion unit('binary', 'decimal', 'hexadecimal', 'octal')), 2: (number to convert)
 * `from converterpackageteam10 import time_zone_converter`
+    * `time_zone_converter.convert_time("arg*")`
+        * args: 1: (country time zone to get)
 * `from converterpackageteam10 import distance_converter`
+    * `distance_converter.allowed_distance_conversions()`
+        * args: None
+    * `distance_converter.convert_distance('arg**', 'arg**', 'arg***')`
+        * args: 1: (number to convert), 2: (unit to convert from), 3: (unit to convert to)
 
 
 ## Link to project:
