@@ -11,7 +11,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 * Jonason Wu (jw5911): [Github Profile](https://github.com/JonasonWu)
 * Alejandro Olazabal (ajo351): [Github Profile](https://github.com/aleolazabal)
-* 
+* Junyi Dong (jd4634): [Github Profile](https://github.com/junyid) 
 * 
 
 # Import the Project
