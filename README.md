@@ -53,7 +53,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
     ```
 * test
     ```
-    $ pytest
+    $ pipenv run pytest
     ```
 
 
