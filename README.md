@@ -16,6 +16,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 # Import the Project
 
+* Link to the PyPi project: [link]()
 * Link to the documentation of the functions: [Code Examples](./README.md#code-examples)
 * Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)
 
