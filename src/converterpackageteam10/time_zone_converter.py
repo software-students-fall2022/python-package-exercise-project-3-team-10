@@ -23,10 +23,4 @@ def convert_timezone(code):
             res[converted] = [timezone]
         else:
             res[converted] += [timezone]
-            
-    result = str(res)
-    for i in range(len(result)):
-        if (result[i] == "]"):
-            result = result[:i+2] + "\n\t\t" + result[i+2:]
-
-    return result
+    return res
