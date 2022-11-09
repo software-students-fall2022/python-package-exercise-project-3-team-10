@@ -49,9 +49,9 @@ class Test_Age_Calc:
                                 dob = " ".join([str(month), str(day), str(year), time])
                                 age_converter.calc_age(dob, unit)
         except ValueError as e:
-            assert False, f"2ValueError: " + e.args[0]
+            assert False, f"ValueError: " + e.args[0]
         except Exception as e:
-            assert False, f"2Exception: " + e.args[0]
+            assert False, f"Exception: " + e.args[0]
         assert True
 
     def test_age_calc_expected_results(self):
@@ -65,7 +65,7 @@ class Test_Age_Calc:
         totalDays = difference.days
         totalWeeks = totalDays // 7
         totalYears = totalDays // 365
-        totalMonths = totalYears*12 + abs(dob.month - (12 - today.month))
+        totalMonths = totalYears*12 - (dob.month) + today.month
         expectedList = [totalYears, totalMonths, totalWeeks, totalDays]
         for expected, unit in zip(expectedList, units):
             assert expected == int(age_converter.calc_age("Jan 1 2000 12:00AM", unit).split()[0]), "Expected the conversion results to be matching."
