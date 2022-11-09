@@ -41,7 +41,7 @@ For Linux:
     * `number_converter.convert_number("arg*", "arg**")`
         * args: 1: (conversion unit('binary', 'decimal', 'hexadecimal', 'octal')), 2: (number to convert)
 * `from converterpackageteam10 import time_zone_converter`
-    * `time_zone_converter.convert_time("arg*")`
+    * `time_zone_converter.convert_timezone("arg*")`
         * args: 1: (the ISO Alpha 2 code of the country)
 * `from converterpackageteam10 import distance_converter`
     * `distance_converter.allowed_distance_conversions()`
