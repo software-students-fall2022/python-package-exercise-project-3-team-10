@@ -44,7 +44,7 @@ For Linux:
         * args: 1: (conversion unit('binary', 'decimal', 'hexadecimal', 'octal')), 2: (number to convert)
 * `from converterpackageteam10 import time_zone_converter`
     * `time_zone_converter.convert_time("arg*")`
-        * args: 1: (country time zone to get)
+        * args: 1: (country time zone to get(use country's iso))
 * `from converterpackageteam10 import distance_converter`
     * `distance_converter.allowed_distance_conversions()`
         * args: None
