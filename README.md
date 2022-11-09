@@ -29,7 +29,9 @@ For Windows:
 > `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
 
 For Linux:
+> Create a `pipenv`-managed virtual environment<br>
 >`python3 -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
+
 
 ## Possible imports
 * `from converterpackageteam10 import age_converter`
