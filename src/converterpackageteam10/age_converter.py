@@ -26,7 +26,7 @@ def calc_age(dob, unit):
             curr_days = today.day - my_dob.day
     else:
         curr_years = today.year-my_dob.year
-        curr_months = today.month-my_dob.month
+        curr_months = today.month-my_dob.month+1
         curr_days = today.day-my_dob.day
     my_full_dob = datetime(curr_years, curr_months, curr_days)
 
