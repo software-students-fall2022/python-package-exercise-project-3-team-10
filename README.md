@@ -12,10 +12,28 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * Jonason Wu (jw5911): [Github Profile](https://github.com/JonasonWu)
 * Alejandro Olazabal (ajo351): [Github Profile](https://github.com/aleolazabal)
 * Junyi Dong (jd4634): [Github Profile](https://github.com/junyid) 
-* 
+* Fatema Nasa=sar (fan6236) : [Github Profile](https://github.com/fnassar)
 
 # Import the Project
+<!-- how a developer who wants to import your project into their own code can do so - include documentation for all functions in your package and a link to an example Python program that uses each of them. -->
+<!-- functions -->
+## Package Name:
+* converterpackageteam10
 
+## Package content(functions):
+* age_converter, number_converter, time_zone_converter, distance_converter
+
+## How to Install:
+> `pip install -i https://test.pypi.org/simple/ converterpackageteam10==1.0.0`
+
+## Possible imports
+* `from converterpackageteam10 import age_converter`
+* `from converterpackageteam10 import number_converter`
+* `from converterpackageteam10 import time_zone_converter`
+* `from converterpackageteam10 import distance_converter`
+
+
+## Link to project:
 * Link to the PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/1.0.0/)
 * Link to the documentation of the functions: [Code Examples](./README.md#code-examples)
 * Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)

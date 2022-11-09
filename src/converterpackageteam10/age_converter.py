@@ -54,7 +54,6 @@ def calc_age(dob, unit):
 
 def help():
     """Provides some help with using the calc_age function"""
-    
     print("calc_age(dob, unit):")
     print("\tInput dob in the following format: MTH DAY YEAR TIME")
     print("\tThese are the available units to convert into:", __units())
@@ -64,4 +63,3 @@ def help():
 
 def __units():
     return ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
-
