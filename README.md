@@ -12,7 +12,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * Jonason Wu (jw5911): [Github Profile](https://github.com/JonasonWu)
 * Alejandro Olazabal (ajo351): [Github Profile](https://github.com/aleolazabal)
 * Junyi Dong (jd4634): [Github Profile](https://github.com/junyid) 
-* Fatema Nasasar (fan6236) : [Github Profile](https://github.com/fnassar)
+* Fatema Nassar (fan6236) : [Github Profile](https://github.com/fnassar)
 
 # Import the Project
 <!-- how a developer who wants to import your project into their own code can do so - include documentation for all functions in your package and a link to an example Python program that uses each of them. -->
@@ -26,11 +26,11 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 ## How to Install:
 For Windows:
 > Create a `pipenv`-managed virtual environment<br>
-> `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
+> `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10==1.0.0`
 
 For Linux:
 > Create a `pipenv`-managed virtual environment<br>
->`python3 -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
+>`python3 -m pip install -i https://test.pypi.org/simple/ converterpackageteam10==1.0.0`
 
 
 ## Possible imports
