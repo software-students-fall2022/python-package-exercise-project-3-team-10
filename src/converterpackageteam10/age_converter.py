@@ -1,6 +1,7 @@
 import datetime
 from datetime import datetime
 
+
 def calc_age(dob, unit):
     """ Given a date of birth, returns a conversion based on the unit desired. """
 
@@ -17,23 +18,20 @@ def calc_age(dob, unit):
     minutes = timedelta.seconds // 60 + hours * 60
     seconds = timedelta.seconds + minutes * 60
 
-    if (my_dob.month>today.month):
+    if (my_dob.month > today.month):
         curr_years = today.year-my_dob.year-1
-        curr_months = abs(my_dob.month -( 12 - today.month))
+        curr_months = abs(my_dob.month - (12 - today.month))
     else:
         curr_years = today.year-my_dob.year
         curr_months = today.month-my_dob.month
-    if (my_dob.day>today.day):
+    if (my_dob.day > today.day):
         curr_days = 30 - my_dob.day + today.day
     else:
         curr_days = today.day - my_dob.day
-    
-    print("\t\tcurr days:   "+str(curr_days)+ "\n")
-    
+        
     my_full_dob = datetime(curr_years, curr_months, curr_days)
 
     months = curr_years * 12 + curr_months
-
 
     if unit == "actual":
         return str(my_full_dob.year) + " years " + str(my_full_dob.month) + " months and " + str(my_full_dob.day) + " days old"
@@ -54,6 +52,7 @@ def calc_age(dob, unit):
     else:
         return "Invalid input"
 
+
 def help():
     """Provides some help with using the calc_age function"""
     print("\tcalc_age(dob, unit):")
@@ -63,5 +62,20 @@ def help():
     print("\t\t\t>> calc_age('Jan 1 2000 1:33PM', 'years')")
     print("\t\t\t" + calc_age('Jan 1 2000 1:33PM', 'years'))
 
+
 def __units():
     return ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
+
+
+def main():
+    print("\tCalling methods...")
+    print("\tCalling help()...")
+    help()
+    print()
+    print("\tCalling calc_age(str, str)...")
+    print("\t\tDOB of Jan 1 2000 1:33PM: ", calc_age('Jan 1 2000 1:33PM', 'actual'))
+    print("\t\tDOB of Jan 11 2000 1:33PM: ", calc_age('Jan 11 2000 1:33PM', 'years'))
+    print("\t\tDOB of Feb 1 2005 1:33PM: ", calc_age('Feb 1 2005 1:33PM', 'days'))
+    print()
+    
+main()
