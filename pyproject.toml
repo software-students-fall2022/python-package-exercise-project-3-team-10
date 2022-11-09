@@ -7,7 +7,7 @@ name = "converterpackageteam10"
 description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
 version = "0.0.7"
 authors = [
-  { name="Jonason Wu", email="jw5911@nyu.edu" },{ name="Alejandro Olazabal", email="ajo351@nyu.edu" }
+  { name="Jonason Wu", email="jw5911@nyu.edu" },{ name="Alejandro Olazabal", email="ajo351@nyu.edu" }, {name = "Junyi Dong", email="jd4634@nyu.edu"}
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
