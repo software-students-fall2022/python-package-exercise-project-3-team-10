@@ -91,12 +91,12 @@ A little exercise to create a Python package, build it, test it, distribute it, 
                 22 years old
     ```
 
-* The following line will give a clear representation of the date of birth:
+* The following line will give a converted description given the date of birth (at 11/8/2022):
     ```
     >> print(age_converter.calc_age('Jan 1 2000 1:33PM', 'actual'))
     22 years 10 months and 7 days old
     ```
-* The following line will give the number of days somewone with that birthday has lived:
+* The following line will give the number of days someone with that birthday has lived (at 11/8/2022):
     ```
     >> print(age_converter.calc_age('Jan 1 2000 1:33PM', 'days'))
     8347 days old
