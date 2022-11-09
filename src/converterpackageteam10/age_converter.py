@@ -29,7 +29,7 @@ def calc_age(dob, unit):
         curr_months = curr_months - 1
     else:
         curr_days = today.day - my_dob.day
-    # 
+    # zero out the time portion of the datetime object
     if(curr_months<1):
         temp_months = 1
         curr_months = 1
@@ -41,13 +41,19 @@ def calc_age(dob, unit):
         curr_years = 1
     else:
         temp_years = 0
+    # 
+    if(curr_days<1):
+        temp_days = 1
+        curr_days = 1
+    else:
+        temp_days = 0
         
     my_full_dob = datetime(curr_years, curr_months, curr_days)
 
     months = curr_years * 12 + curr_months
 
     if unit == "actual":
-        return str(my_full_dob.year - temp_years) + " years " + str(my_full_dob.month - temp_months) + " months and " + str(my_full_dob.day) + " days old"
+        return str(my_full_dob.year - temp_years) + " years " + str(my_full_dob.month - temp_months) + " months and " + str(my_full_dob.day - temp_days) + " days old"
     elif unit == "years":
         return str(my_full_dob.year - temp_years) + " years old"
     elif unit == "months":
