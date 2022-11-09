@@ -2,9 +2,13 @@
 from datetime import datetime
 import pytz #need pip install
 
-def convert_timezone(code): #input is country’s ISO Alpha 2 code
-    '''Converts the current time into a dictionary'''
-    ''' given the country's ISO Alpha 2 code, returns a dictionary ... '''
+def convert_timezone(code):
+    ''' 
+    The code is the country’s ISO Alpha 2 code.
+    Converts the current time into a dictionary.
+    The key of the dictionary is the possible times of the current country.
+    The value is a list of timezones that has the time.
+    '''
 
     if code not in pytz.country_timezones:
         raise KeyError('Expected valid ISO Alpha 2 code but got ' +  code)

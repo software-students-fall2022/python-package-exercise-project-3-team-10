@@ -16,7 +16,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 # Import the Project
 
-* Link to the PyPi project: [link]()
+* Link to the PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/1.0.0/)
 * Link to the documentation of the functions: [Code Examples](./README.md#code-examples)
 * Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)
 
@@ -62,6 +62,29 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 ## Age Converter
 
+* The following line will give the options for the age conversions that are available:
+    ```
+    >> age_converter.help()
+    calc_age(dob, unit):
+        Input dob in the following format: MTH DAY YEAR TIME
+        These are the available units to convert into: ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
+        Example:
+                >> calc_age('Jan 1 2000 1:33PM', 'years')
+                22 years old
+    ```
+
+* The following line will give a clear representation of the date of birth:
+    ```
+    >> print(age_converter.calc_age('Jan 1 2000 1:33PM', 'actual'))
+    22 years 10 months and 7 days old
+    ```
+* The following line will give the number of days somewone with that birthday has lived:
+    ```
+    >> print(age_converter.calc_age('Jan 1 2000 1:33PM', 'days'))
+    8347 days old
+    ```
+
+
 ## Distance Converter
 
 * The following line will print and give all the conversions for distances that are available:
@@ -91,4 +114,26 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 ## Number Converter
 
+* The following line will convert a decimal value of 1000 into binary:
+    ```
+    >> print(number_converter.convert_number("binary", 1000))
+    0b1111101000
+    ```
+* The following line will convert a decimal value of 1000 into octal:
+    ```
+    >> print(number_converter.convert_number("octal", 1000))
+    0o1750
+    ```
+* The following line will convert a hexadecimal value of 0x1111 into decimal:
+    ```
+    >> print(number_converter.convert_number("decimal", 0x1111))
+    4369
+    ```
+
 ## Time Zone Converter
+
+* The following line will print out all the possible times of the United States at the current time of 8:16PM:
+    ```
+    >> print(time_zone_converter.convert_timezone("US"))
+    {'08:16PM': ['America/New_York', 'America/Detroit', 'America/Kentucky/Louisville', 'America/Kentucky/Monticello', 'America/Indiana/Indianapolis', 'America/Indiana/Vincennes', 'America/Indiana/Winamac', 'America/Indiana/Marengo', 'America/Indiana/Petersburg', 'America/Indiana/Vevay'], '07:16PM': ['America/Chicago', 'America/Indiana/Tell_City', 'America/Indiana/Knox', 'America/Menominee', 'America/North_Dakota/Center', 'America/North_Dakota/New_Salem', 'America/North_Dakota/Beulah'], '06:16PM': ['America/Denver', 'America/Boise', 'America/Phoenix'], '05:16PM': ['America/Los_Angeles'], '04:16PM': ['America/Anchorage', 'America/Juneau', 'America/Sitka', 'America/Metlakatla', 'America/Yakutat', 'America/Nome'], '03:16PM': ['America/Adak', 'Pacific/Honolulu']}
+    ```

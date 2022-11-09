@@ -9,7 +9,9 @@ def main():
   age_converter.help()
   print()
   print("Calling age_converter.calc_age(str, str)...")
-  print(age_converter.calc_age('Jan 1 2000 1:33PM', 'years'))
+  print("DOB of Jan 1 2000 1:33PM: ", age_converter.calc_age('Jan 1 2000 1:33PM', 'actual'))
+  print("DOB of Jan 1 2000 1:33PM: ", age_converter.calc_age('Jan 1 2000 1:33PM', 'years'))
+  print("DOB of Jan 1 2000 1:33PM: ", age_converter.calc_age('Jan 1 2000 1:33PM', 'days'))
   print()
 
   print()
@@ -33,6 +35,9 @@ def main():
   print("Binary of 0b1111 =", number_converter.convert_number("decimal", 0b1111), "in decimal")
   print("Octal of 0o1111 =", number_converter.convert_number("decimal", 0o1111), "in decimal")
   print("Hexadecimal of 0x1111 =", number_converter.convert_number("decimal", 0x1111), "in decimal")
+  print("Decimal of 1000 =", number_converter.convert_number("binary", 1000), "in binary")
+  print("Decimal of 1000 =", number_converter.convert_number("octal", 1000), "in octal")
+  print("Decimal of 1000 =", number_converter.convert_number("hexadecimal", 1000), "in hexadecimal")
   print()
 
   print()

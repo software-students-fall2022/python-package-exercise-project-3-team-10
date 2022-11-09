@@ -34,35 +34,33 @@ def calc_age(dob, unit):
 
 
     if unit == "actual":
-        return str(my_full_dob.year) + "\x1B[3m years\x1B[0m, " + " " + str(my_full_dob.month) + "\x1B[3m months\x1B[0m and " + " " + str(my_full_dob.day) + "\x1B[3m days\x1B[0m old"
+        return str(my_full_dob.year) + " years " + str(my_full_dob.month) + " months and " + str(my_full_dob.day) + " days old"
     elif unit == "years":
-        return str(my_full_dob.year) + " \x1B[3m years\x1B[0m  old "
+        return str(my_full_dob.year) + " years old"
     elif unit == "months":
-        return str(months) + " \x1B[3m months\x1B[0m  old "
+        return str(months) + " months old"
     elif unit == "weeks":
-        return str(weeks) + " \x1B[3m weeks\x1B[0m old "
+        return str(weeks) + " weeks old"
     elif unit == "days":
-        return str(days) + " \x1B[3m days\x1B[0m old "
+        return str(days) + " days old"
     elif unit == "hours":
-        return str(hours) + " \x1B[3m hours\x1B[0m old "
+        return str(hours) + " hours old"
     elif unit == "minutes":
-        return str(minutes) + " \x1B[3m minutes\x1B[0m old "
+        return str(minutes) + " minutes old"
     elif unit == "seconds":
-        return str(seconds) + " \x1B[3m seconds\x1B[0m old "
+        return str(seconds) + " seconds old"
     else:
         return "Invalid input"
 
 def help():
     """Provides some help with using the calc_age function"""
     
-    print("age_converter.calc_age(dob, unit):")
+    print("calc_age(dob, unit):")
     print("\tInput dob in the following format: MTH DAY YEAR TIME")
     print("\tThese are the available units to convert into:", __units())
     print("\tExample:")
-    print("\t\t>>calc_age('Jan 1 2000 1:33PM', 'years')")
+    print("\t\t>> calc_age('Jan 1 2000 1:33PM', 'years')")
     print("\t\t" + calc_age('Jan 1 2000 1:33PM', 'years'))
-
-    return "Age_converter.calc_age: \n\tYou can use the following units: \n\t" + "actuall, years, months, weeks, days, hours, minutes, seconds" + "\n\t" + "Example: calc_age('Jan 1 2000 1:33PM', 'years')"
 
 def __units():
     return ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
