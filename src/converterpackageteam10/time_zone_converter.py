@@ -23,7 +23,3 @@ def convert_timezone(code):
         else:
             res[converted] += [timezone]
     return res
-
-
-
-
