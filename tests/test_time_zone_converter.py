@@ -43,10 +43,15 @@ class Test:
     def test_valid_output(self):
         #check if all timezones in output are in the the list for all timezones of a given ISO code
         expected = pytz.country_timezones["US"]
-        timezones = time_zone_converter.convert_timezone("US").values()
-        for timezone in timezones:
-            assert(timezone in expected),"Expected output timezones to be in list of all timezones for ISO Code"
-    
+        # Get a 2D list of timezones
+        list2D = time_zone_converter.convert_timezone("US").values()
+        # For each list in the 2D list
+        for li in list2D:
+            # For each timezone inside the list
+            for timezone in li:
+                # Make sure timezone is expected
+                assert(timezone in expected), "Expected output timezones to be in list of all timezones for ISO Code"
+
     def test_output_type(self):
         #check if returned value is of type dict
         actual = time_zone_converter.convert_timezone("PR")

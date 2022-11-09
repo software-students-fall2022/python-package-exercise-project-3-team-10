@@ -16,6 +16,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 # Import the Project
 
+* Link to the documentation of the functions: [Code Examples](./README.md#code-examples)
 * Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)
 
 # Contribute to this Project

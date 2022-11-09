@@ -15,7 +15,9 @@ def convert_timezone(code): #input is country’s ISO Alpha 2 code
     for timezone in timezones:
         converted = utc.astimezone(pytz.timezone(timezone)).strftime(fmt)
         if converted not in res:
-            res[timezone] = converted
+            res[converted] = [timezone]
+        else:
+            res[converted] += [timezone]
     return res
 
 
