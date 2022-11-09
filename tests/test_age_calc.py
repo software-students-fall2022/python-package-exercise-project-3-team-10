@@ -1,7 +1,7 @@
 import pytest
 from converterpackageteam10 import age_converter
 import re
-import datetime
+from datetime import datetime
 
 class Test_Age_Calc:
 
@@ -33,33 +33,39 @@ class Test_Age_Calc:
                     actual = True        
         assert actual == True, f"Expected {result} to be a different format!"
     
-    def test_age_calc_valid_years(self):
-        result = age_converter.calc_age("Jan 1 2001 12:00AM", "years")
-        today = datetime.date.today()
-        expected = today.year - 2001
-        assert isinstance(result, str), f"Expected {result} to be a string!"
-    
-    def test_age_calc_valid_months(self):
-        result = age_converter.calc_age("Jan 1 2001 12:00AM", "years")
-        today = datetime.date.today()
-        expected = today.year - 2001
-        assert expected == int(result.split()[0]), f"Expected {result} to be a string!"
-    
     def test_age_calc_no_exceptions(self):
         years = [2001, 2010, 2021]
         months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        days = [1, 10, 12, 15, 18, 21, 24, 27]
+        days = [1, 7, 10, 12, 15, 18, 21, 24, 27]
+        times = ["12:00AM", "5:43PM", "11:30AM", "2:00PM", "7:20PM"]
         units = ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
         try:
             for year in years:
                 for month in months:
                     for day in days:
-                        for unit in units:
-                            dob = " ".join([str(month), str(day), str(year), "12:00AM"])
-                            age_converter.calc_age(dob, unit)
+                        for time in times:
+                            for unit in units:
+                                dob = " ".join([str(month), str(day), str(year), time])
+                                age_converter.calc_age(dob, unit)
         except ValueError as e:
             assert False, "ValueError: " + e.args[0]
         except Exception as e:
             assert False, "Exception: " + e.args[0]
         assert True
+
+    def test_age_calc_expected_results(self):
+        units = ['years', 'months', 'weeks', 'days']
+        #Set the dob to Jan 1 2000 12:00AM
+        dob = datetime(2000, 1, 1, 0, 0, 0)
+        #Get the current time
+        today = datetime.now()
+        difference = today - dob
+
+        totalDays = difference.days
+        totalWeeks = totalDays // 7
+        totalYears = totalDays // 365
+        totalMonths = totalYears*12 - (dob.month - 1) + today.month
+        expectedList = [totalYears, totalMonths, totalWeeks, totalDays]
+        for expected, unit in zip(expectedList, units):
+            assert expected == int(age_converter.calc_age("Jan 1 2000 12:00AM", unit).split()[0]), "Expected the conversion results to be matching."
