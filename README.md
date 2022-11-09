@@ -10,7 +10,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 # Teammates
 
 * Jonason Wu (jw5911): [Github Profile](https://github.com/JonasonWu)
-* 
+* Junyi Dong (jd4634): [Github Profile](https://github.com/junyid)
 * 
 * 
 
