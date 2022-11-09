@@ -67,5 +67,7 @@ class Test_Age_Calc:
         totalYears = totalDays // 365
         totalMonths = totalYears*12 - (dob.month - 1) + today.month
         expectedList = [totalYears, totalMonths, totalWeeks, totalDays]
+        i=0
         for expected, unit in zip(expectedList, units):
-            assert expected == int(age_converter.calc_age("Jan 1 2000 12:00AM", unit).split()[0]), "Expected the conversion results to be matching."
+            i+=1
+            assert expected == int(age_converter.calc_age("Jan 1 2000 12:00AM", unit).split()[i]), "Expected the conversion results to be matching."
