@@ -24,19 +24,36 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * age_converter, number_converter, time_zone_converter, distance_converter
 
 ## How to Install:
-> `pip install -i https://test.pypi.org/simple/ converterpackageteam10==1.0.0`
+For Windows:
+> Create a `pipenv`-managed virtual environment<br>
+> `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
+
+For Linux:
+>`python3 -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
 
 ## Possible imports
 * `from converterpackageteam10 import age_converter`
+    * `age_converter.calc_age("arg*", "arg**")`
+        * args: 1: (Date Of Birth), 2: (age calculation unit('actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds'))
+    * `age_converter.help()`
+        * args: None
 * `from converterpackageteam10 import number_converter`
+    * `number_converter.convert_number("arg*", "arg**")`
+        * args: 1: (conversion unit('binary', 'decimal', 'hexadecimal', 'octal')), 2: (number to convert)
 * `from converterpackageteam10 import time_zone_converter`
+    * `time_zone_converter.convert_time("arg*")`
+        * args: 1: (country time zone to get)
 * `from converterpackageteam10 import distance_converter`
+    * `distance_converter.allowed_distance_conversions()`
+        * args: None
+    * `distance_converter.convert_distance('arg**', 'arg**', 'arg***')`
+        * args: 1: (number to convert), 2: (unit to convert from), 3: (unit to convert to)
 
 
 ## Link to project:
-* Link to the PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/1.0.0/)
-* Link to the documentation of the functions: [Code Examples](./README.md#code-examples)
-* Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)
+* Link to the PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/)
+* Link to the documentation of the functions: [Code Examples](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10#code-examples)
+* Link to an example python program: [\_\_main\_\_.py](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10/blob/main/__main__.py)
 
 # Contribute to this Project
 
