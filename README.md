@@ -42,7 +42,7 @@ For Linux:
         * args: 1: (conversion unit('binary', 'decimal', 'hexadecimal', 'octal')), 2: (number to convert)
 * `from converterpackageteam10 import time_zone_converter`
     * `time_zone_converter.convert_time("arg*")`
-        * args: 1: (country time zone to get)
+        * args: 1: (the ISO Alpha 2 code of the country)
 * `from converterpackageteam10 import distance_converter`
     * `distance_converter.allowed_distance_conversions()`
         * args: None
@@ -108,12 +108,12 @@ For Linux:
                 22 years old
     ```
 
-* The following line will give a clear representation of the date of birth:
+* The following line will give a converted description given the date of birth (at 11/8/2022):
     ```
     >> print(age_converter.calc_age('Jan 1 2000 1:33PM', 'actual'))
     22 years 10 months and 7 days old
     ```
-* The following line will give the number of days somewone with that birthday has lived:
+* The following line will give the number of days someone with that birthday has lived (at 11/8/2022):
     ```
     >> print(age_converter.calc_age('Jan 1 2000 1:33PM', 'days'))
     8347 days old
