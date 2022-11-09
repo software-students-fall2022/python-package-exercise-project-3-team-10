@@ -10,8 +10,8 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 # Teammates
 
 * Jonason Wu (jw5911): [Github Profile](https://github.com/JonasonWu)
-* Junyi Dong (jd4634): [Github Profile](https://github.com/junyid)
-* 
+* Alejandro Olazabal (ajo351): [Github Profile](https://github.com/aleolazabal)
+* Junyi Dong (jd4634): [Github Profile](https://github.com/junyid) 
 * 
 
 # Import the Project
@@ -25,20 +25,38 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * Open bash terminal
 * Clone this repository
     ```
-    git clone https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10.git
+    $ git clone https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10.git
     ```
 * Get into the project directory
     ```
-    cd python-package-exercise-project-3-team-10
+    $ cd python-package-exercise-project-3-team-10
     ```
-* Create new virtual environment
+* Install pipenv
     ```
-    python -m venv .venv
+    $ pip install pipenv
     ```
-* Activate the environment
+* Activate virtual enviroment
     ```
-    source .venv/Scripts/activate
+    $ pipenv shell
     ```
+* Install all dependencies
+    ```
+    $ pipenv install -e .
+    ```
+* Build 
+    ```
+    $ python -m build
+    ```
+    If this doesnt work try
+    ```
+    $ python3 -m build
+    ```
+* Test
+    ```
+    $ pipenv run pytest
+    ```
+
+
 
 # Code Examples
 
