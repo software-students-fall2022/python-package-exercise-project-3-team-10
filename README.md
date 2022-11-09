@@ -35,8 +35,8 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 ## Link to project:
 * Link to the PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/1.0.0/)
-* Link to the documentation of the functions: [Code Examples](./README.md#code-examples)
-* Link to an example python program: [\_\_main\_\_.py](./src/converterpackageteam10/__main__.py)
+* Link to the documentation of the functions: [Code Examples](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10#code-examples)
+* Link to an example python program: [\_\_main\_\_.py](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10/blob/main/src/converterpackageteam10/__main__.py)
 
 # Contribute to this Project
 
