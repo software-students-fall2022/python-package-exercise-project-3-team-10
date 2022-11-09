@@ -29,4 +29,4 @@ def convert_timezone(code):
         if (result[i] == "]"):
             result = result[:i+2] + "\n\t\t" + result[i+2:]
 
-    return res
+    return result
