@@ -17,17 +17,19 @@ def calc_age(dob, unit):
     minutes = timedelta.seconds // 60 + hours * 60
     seconds = timedelta.seconds + minutes * 60
 
-    if(my_dob.month>today.month):
+    if (my_dob.month>today.month):
         curr_years = today.year-my_dob.year-1
         curr_months = abs(my_dob.month -( 12 - today.month))
-        if(my_dob.day>today.day):
-            curr_days = 30 - my_dob.day + today.day
-        else:
-            curr_days = today.day - my_dob.day
     else:
         curr_years = today.year-my_dob.year
         curr_months = today.month-my_dob.month
-        curr_days = today.day-my_dob.day
+    if (my_dob.day>today.day):
+        curr_days = 30 - my_dob.day + today.day
+    else:
+        curr_days = today.day - my_dob.day
+    
+    print("\t\tcurr days:   "+str(curr_days)+ "\n")
+    
     my_full_dob = datetime(curr_years, curr_months, curr_days)
 
     months = curr_years * 12 + curr_months
@@ -54,12 +56,12 @@ def calc_age(dob, unit):
 
 def help():
     """Provides some help with using the calc_age function"""
-    print("calc_age(dob, unit):")
-    print("\tInput dob in the following format: MTH DAY YEAR TIME")
-    print("\tThese are the available units to convert into:", __units())
-    print("\tExample:")
-    print("\t\t>> calc_age('Jan 1 2000 1:33PM', 'years')")
-    print("\t\t" + calc_age('Jan 1 2000 1:33PM', 'years'))
+    print("\tcalc_age(dob, unit):")
+    print("\t\tInput dob in the following format: MTH DAY YEAR TIME")
+    print("\t\tThese are the available units to convert into:", __units())
+    print("\t\tExample:")
+    print("\t\t\t>> calc_age('Jan 1 2000 1:33PM', 'years')")
+    print("\t\t\t" + calc_age('Jan 1 2000 1:33PM', 'years'))
 
 def __units():
     return ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']

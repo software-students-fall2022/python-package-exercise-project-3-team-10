@@ -22,5 +22,5 @@ def convert_timezone(code):
         if converted not in res:
             res[converted] = [timezone]
         else:
-            res[converted] += [timezone]
+            res[converted] += [timezone]    
     return res
