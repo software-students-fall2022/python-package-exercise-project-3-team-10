@@ -25,6 +25,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 
 ## How to Install:
 For Windows:
+> Create a `pipenv`-managed virtual environment<br>
 > `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
 
 For Linux:

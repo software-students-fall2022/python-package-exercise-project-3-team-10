@@ -1,7 +1,7 @@
 import age_converter
 import distance_converter
 import number_converter
-# import time_zone_converter
+import time_zone_converter
 
 def main():
   print("Calling age_converter methods...")
