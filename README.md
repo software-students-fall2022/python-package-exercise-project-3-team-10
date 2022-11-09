@@ -43,7 +43,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
     ```
     $ pipenv install -e .
     ```
-* build 
+* Build 
     ```
     $ python -m build
     ```
@@ -51,7 +51,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
     ```
     $ python3 -m build
     ```
-* test
+* Test
     ```
     $ pipenv run pytest
     ```
