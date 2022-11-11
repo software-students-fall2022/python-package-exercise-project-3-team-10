@@ -3,18 +3,18 @@ from converterpackageteam10 import age_converter
 import re
 from datetime import datetime
 
-class Test_Age_Calc:
+class TestAgeCalc:
 
     def test_sanity_check(self):
         expected = True # the value we expect to be present
         actual = True # the value we see in reality        
         assert actual == expected, "Expected True to be equal to True!"
 
-    def test_valid_out_age_calc(self):
+    def test_age_calc_string_output(self):
         result = age_converter.calc_age("Dec 18 2001 10:07AM", "seconds")
         assert isinstance(result, str), f"Expected {result} to be a string!"
     
-    def test_valid_out_age_calc2(self):
+    def test_age_calc_correct_format(self):
         units = {"actual","years", "months", "weeks", "days", "hours", "minutes", "seconds"}
         actual = False
         for unit in units:
@@ -37,7 +37,7 @@ class Test_Age_Calc:
         years = [2001, 2010, 2021]
         months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        days = [1, 7, 10, 12, 15, 18, 21, 24, 27]
+        days = [i for i in range(1, 28)]
         times = ["12:00AM", "5:43PM", "11:30AM", "2:00PM", "7:20PM"]
         units = ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
         try:
@@ -46,12 +46,12 @@ class Test_Age_Calc:
                     for day in days:
                         for time in times:
                             for unit in units:
-                                dob = " ".join([str(month), str(day), str(year), time])
+                                dob = " ".join([month, str(day), str(year), time])
                                 age_converter.calc_age(dob, unit)
         except ValueError as e:
-            assert False, f"ValueError: " + e.args[0]
+            assert False, f"ValueError: {e.args[0]} ({dob} {unit})"
         except Exception as e:
-            assert False, f"Exception: " + e.args[0]
+            assert False, f"Exception: {e.args[0]} ({dob} {unit})"
         assert True
 
     def test_age_calc_expected_results(self):
