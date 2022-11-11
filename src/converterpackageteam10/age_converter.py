@@ -104,6 +104,5 @@ def __units():
 #         print("Error1: " + str(dob) + " " + unit + " " + str(e) + " " + str(age))
 #     except Exception as e:
 #         print("Error2: " + str(dob) + " " + unit + " " + str(e) + " " + str(age))
-#     # print(calc_age('Oct 21 2001 12:00AM', 'actual'))   
     
-# main()
+main()
