@@ -42,7 +42,7 @@ For Linux:
         * toUnit: The unit to convert value into. Choices: 'binary', 'decimal', 'hexadecimal', 'octal'
         * value: The value to convert. It could be in binary, octal, decimal, or hexadecimal form.
 * `from converterpackageteam10 import time_zone_converter`
-    * `time_zone_converter.convert_timezone(code)`
+    * `time_zone_converter.convert_timezone(code: str)`
         * code: the ISO Alpha 2 code of the country.
 * `from converterpackageteam10 import distance_converter`
     * `distance_converter.allowed_distance_conversions()`
