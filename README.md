@@ -33,21 +33,23 @@ For Linux:
 
 ## Possible imports
 * `from converterpackageteam10 import age_converter`
-    * `age_converter.calc_age("arg*", "arg**")`
-        * args: 1: (Date Of Birth), 2: (age calculation unit('actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds'))
+    * `age_converter.calc_age(dob: str, unit: str)`
+        * dob: Date Of Birth (e.g., Jan 10 2000 12:00AM))
+        * unit: The unit to convert into. Choices: 'actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds'.
     * `age_converter.help()`
-        * args: None
 * `from converterpackageteam10 import number_converter`
-    * `number_converter.convert_number("arg*", "arg**")`
-        * args: 1: (conversion unit('binary', 'decimal', 'hexadecimal', 'octal')), 2: (number to convert)
+    * `number_converter.convert_number(toUnit: str, value: Any)`
+        * toUnit: The unit to convert value into. Choices: 'binary', 'decimal', 'hexadecimal', 'octal'
+        * value: The value to convert. It could be in binary, octal, decimal, or hexadecimal form.
 * `from converterpackageteam10 import time_zone_converter`
-    * `time_zone_converter.convert_timezone("arg*")`
-        * args: 1: (the ISO Alpha 2 code of the country)
+    * `time_zone_converter.convert_timezone(code: str)`
+        * code: the ISO Alpha 2 code of the country.
 * `from converterpackageteam10 import distance_converter`
     * `distance_converter.allowed_distance_conversions()`
-        * args: None
-    * `distance_converter.convert_distance('arg**', 'arg**', 'arg***')`
-        * args: 1: (number to convert), 2: (unit to convert from), 3: (unit to convert to)
+    * `distance_converter.convert_distance(num: float | int | str, unit1: str, unit2: str)`
+        * num: A number that is convertible to a float value.
+        * unit1: The unit to convert from
+        * unit2: The unit to convert to
 
 
 ## Link to project:
@@ -90,8 +92,6 @@ For Linux:
     ```
     $ pipenv run pytest
     ```
-
-
 
 # Code Examples
 

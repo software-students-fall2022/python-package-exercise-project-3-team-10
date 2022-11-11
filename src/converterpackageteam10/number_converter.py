@@ -1,6 +1,11 @@
-def convert_number(to_numeral_system, number):
-    ''' converts a number into the to_numeral_system indicated 
-        Note: The number could be in binary, octal, decimal, or hexadecimal form.
+
+
+def convert_number(to_numeral_system: str, number):
+    ''' 
+    Converts a number into the to_numeral_system indicated.
+
+    Note: The number should be written in binary, octal, decimal, or hexadecimal form 
+    (e.g., 0b1111, 0o1111, 1111, 0x1111).
     '''
 
     numeral_systems = ["binary", "octal", "decimal", "hexadecimal"]

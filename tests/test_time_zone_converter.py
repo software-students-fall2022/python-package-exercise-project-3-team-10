@@ -3,8 +3,7 @@ from converterpackageteam10 import time_zone_converter
 import pytz
 from datetime import datetime
 
-
-class Test:
+class TestTimeZoneConverter:
     def test_exception_raised(self):
         #check if KeyError exception was raised
         with pytest.raises(KeyError) as excinfo:
@@ -45,15 +44,18 @@ class Test:
         expected = pytz.country_timezones["US"]
         # Get a 2D list of timezones
         list2D = time_zone_converter.convert_timezone("US").values()
+        count = 0
         # For each list in the 2D list
         for li in list2D:
             # For each timezone inside the list
             for timezone in li:
+                count += 1
                 # Make sure timezone is expected
-                assert(timezone in expected), "Expected output timezones to be in list of all timezones for ISO Code"
+                assert(timezone in expected),  f"Expected {timezone} to exist inside the returned dictionary"
+        assert count == len(expected), "Expected the count of timezones to be equal."
 
     def test_output_type(self):
         #check if returned value is of type dict
         actual = time_zone_converter.convert_timezone("PR")
-        assert isinstance(actual,dict),"Expected output to be of type dictionary"
+        assert isinstance(actual,dict), "Expected output to be of type dictionary"
     

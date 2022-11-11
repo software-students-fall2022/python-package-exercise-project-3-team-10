@@ -12,7 +12,7 @@ class TestDistanceConverter:
         actual = True # the value we see in reality
         assert actual == expected, "Expected True to be equal to True!"
     # Sanity check to make sure that double underscore for variable means that is is private.
-    def test_sanity_units_not_exist(self):
+    def test_sanity_private_variables_declared_correctly(self):
         try:
             units = distance_converter.__units
             alias_units = distance_converter.__alias_units
@@ -21,39 +21,42 @@ class TestDistanceConverter:
         except AttributeError as e:
             assert True
     
-    def test_invalid_unit(self):
+    def test_convert_distance_invalid_unit(self):
         try:
             distance_converter.convert_distance(10, None, None)
             assert False, "Invalid unit parameters should result in UnitNotFound exception."
         except distance_converter.UnitNotFound as e:
             assert True
-    def test_invalid_unit_2(self):
+
+    def test_convert_distance_invalid_unit1(self):
         try:
             distance_converter.convert_distance(100, "non-existent", "in")
             assert False, "Since unit1 paramter is invalid, UnitNotFound exception should be thrown"
         except distance_converter.UnitNotFound as e:
             assert True
-    def test_invalid_unit_3(self):
+
+    def test_convert_distance_invalid_unit2(self):
         try:
             distance_converter.convert_distance(100, "in", "non-existent")
             assert False, "Since unit2 paramter is invalid, UnitNotFound exception should be thrown"
         except distance_converter.UnitNotFound as e:
             assert True
-    def test_invalid_num(self):
+
+    def test_convert_distance_invalid_num(self):
         try:
             distance_converter.convert_distance("abasd", "in", "in")
             assert False, "Invalid number input should not be convertible. Exception should be thrown."
         except Exception as e:
             assert True
 
-    def test_allowed_conversions(self):
+    def test_allowed_distance_conversions_conversions_exist(self):
         expectedList = ["in", "ft", "mi", "mm", "cm", "m", "km"]
         actualList = distance_converter.allowed_distance_conversions()
         for actual in actualList:
-            assert actual in expectedList, "The expectedList does not have the following unit: " + actual
+            assert actual in expectedList, "The actualList does not have the following unit: " + actual
 
 
-    def test_convert_inches_to_other(self):
+    def test_convert_distance_inches_to_other(self):
         # Note: We assume that only the conversion of inches exist.
         unit1 = 'in'
         unit2List = ["in"]
@@ -69,7 +72,7 @@ class TestDistanceConverter:
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
 
-    def test_convert_feet_to_other(self):
+    def test_convert_distance_feet_to_other(self):
         # Note: We have the addition of feet conversions.
         unit1 = 'ft'
         unit2List = ["in", "ft"]
@@ -85,7 +88,7 @@ class TestDistanceConverter:
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
 
-    def test_convert_mile_to_other(self):
+    def test_convert_distance_mile_to_other(self):
         # Note: We have the addition of mile conversions.
         unit1 = 'mi'
         unit2List = ["in", "ft", "mi"]
@@ -101,7 +104,7 @@ class TestDistanceConverter:
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
 
-    def test_convert_milimeter_to_other(self):
+    def test_convert_distance_milimeter_to_other(self):
         # Note: We have the addition of milimeter conversions.
         unit1 = 'mm'
         unit2List = ["in", "ft", "mi", "mm"]
@@ -117,7 +120,7 @@ class TestDistanceConverter:
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
 
-    def test_convert_centimeter_to_other(self):
+    def test_convert_distance_centimeter_to_other(self):
         # Note: We have the addition of milimeter conversions.
         unit1 = 'cm'
         unit2List = ["in", "ft", "mi", "mm", "cm"]
@@ -133,7 +136,7 @@ class TestDistanceConverter:
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
 
-    def test_convert_meter_to_other(self):
+    def test_convert_distance_meter_to_other(self):
         # Note: We have the addition of meter conversions.
         unit1 = 'm'
         unit2List = ["in", "ft", "mi", "mm", "cm", "m"]
@@ -149,7 +152,7 @@ class TestDistanceConverter:
             rev_actual = num
             assert abs(rev_actual-rev_expected) <= TestDistanceConverter.tol, "The conversion of " + unit2 + " to " + unit1 + " fails"
 
-    def test_convert_kilometer_to_other(self):
+    def test_convert_distance_kilometer_to_other(self):
         # Note: We have the addition of kilometer conversions.
         unit1 = 'km'
         unit2List = ["in", "ft", "mi", "mm", "cm", "m", "km"]
