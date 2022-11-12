@@ -1,8 +1,8 @@
 
-''' This variable stores a set of valid conversion values '''
+''' This variable stores a set of valid conversion values. '''
 __units = {"in", "ft", "mi", "mm", "cm", "m", "km"}
 
-''' This variable stores a dictionary of aliases for the __units'''
+''' This variable stores a dictionary of aliases for the __units. '''
 __alias_units = {
     "inches": "in", 
     "feet": "ft", 
@@ -13,7 +13,7 @@ __alias_units = {
     "kilometer": "km"
 }
 
-''' This variable stores the conversion coefficients '''
+''' This variable stores the conversion coefficients. '''
 __conversions = {
     "in": {"in": 1, "ft": 1/12, "mi": 1/63360, "mm": 25.4, "cm": 2.54, "m": 0.0254, "km": 2.54e-5}, 
     "ft": {"in": 12, "ft": 1, "mi": 1/5280, "mm": 304.8, "cm": 30.48, "m": 0.3048, "km": 3.048e-4},
@@ -25,7 +25,9 @@ __conversions = {
 }
 
 def allowed_distance_conversions():
-    """ gives a list of allowed conversions for distance and returns a list of valid conversion values. """
+    """ 
+    Gives a list of allowed conversions for distance and returns a list of valid conversion values. 
+    """
 
     print("These are the allowed unit inputs for the convert_distance method: ")
     li = []
@@ -34,9 +36,10 @@ def allowed_distance_conversions():
     print("\n".join(li))
     return list(__units)
 
-def convert_distance(num, unit1, unit2):
-    ''' converts a distance of num from unit1 into unit2 '''
-
+def convert_distance(num: float | int | str, unit1: str, unit2: str) -> float:
+    ''' 
+    Converts a distance of num from unit1 into unit2.
+    '''
     if unit1 in __units:
         if unit2 in __units:
             return float(num) * __conversions[unit1][unit2]
@@ -46,8 +49,9 @@ def convert_distance(num, unit1, unit2):
         raise UnitNotFound(unit1)
 
 class UnitNotFound(Exception):
-    ''' This exception is thrown when the unit to convert is not found '''
-
+    ''' 
+    This exception is thrown when the unit to convert is not found.
+    '''
     def __init__(self, unit):
-        ''' set the exception message '''
+        ''' Set the exception message. '''
         super().__init__("The unit " + str(unit) + " is not listed as a valid convertible. Call allowed_distance_conversions to get a list of allowed conversions.")
