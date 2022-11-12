@@ -41,7 +41,7 @@ $ python
 * You can now run: 
 * `from converterpackageteam10 import age_converter`
     * `age_converter.calc_age(dob: str, unit: str)`
-        * dob: Date Of Birth (e.g., Jan 10 2000 12:00AM))
+        * dob: Date Of Birth (e.g., Jan 10 2000 12:00AM)
         * unit: The unit to convert into. Choices: 'actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds'.
     * `age_converter.help()`
 * `from converterpackageteam10 import number_converter`
@@ -60,7 +60,8 @@ $ python
 
 
 ## Link to project:
-* Link to the PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/)
+* Link to the Test PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/)
+* Link to the actual PyPi project: [link](https://pypi.org/project/converterpackageteam10/)
 * Link to the documentation of the functions: [Code Examples](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10#code-examples)
 * Link to an example python program: [\_\_main\_\_.py](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10/blob/main/__main__.py)
 
