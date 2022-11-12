@@ -24,14 +24,21 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 * age_converter, number_converter, time_zone_converter, distance_converter
 
 ## How to Install:
-For Windows:
-> Create a `pipenv`-managed virtual environment<br>
-> `py -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
-
-For Linux:
->`python3 -m pip install -i https://test.pypi.org/simple/ converterpackageteam10`
+> Activate a `pipenv` shell: <br>
+```
+$ pipenv shell
+```
+> Install our package: <br>
+```
+$ pipenv install converterpackageteam10
+```
 
 ## Possible imports
+* `You can test out these imports either on a python file or test the on the python shell with the following command:`
+```
+$ python
+```
+* You can now run: 
 * `from converterpackageteam10 import age_converter`
     * `age_converter.calc_age(dob: str, unit: str)`
         * dob: Date Of Birth (e.g., Jan 10 2000 12:00AM))
