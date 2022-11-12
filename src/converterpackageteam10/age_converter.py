@@ -15,6 +15,8 @@ def calc_age(dob: str, unit: str) -> str:
         return "Invalid date format"
 
     today = datetime.now()
+    days30 = {4, 6, 9, 11}
+    days31 = {1, 3, 5, 7, 8, 10, 12}
     timedelta = today - my_dob
     days = timedelta.days
     weeks = timedelta.days // 7
@@ -29,10 +31,13 @@ def calc_age(dob: str, unit: str) -> str:
         curr_years = today.year-my_dob.year
         curr_months = today.month-my_dob.month
     if (my_dob.day > today.day):
-        curr_days = my_dob.day - today.day# +30
         curr_months = curr_months - 1
+    if (my_dob.month in days30):
+        curr_days = abs((30 - my_dob.day) + today.day)
+    elif (my_dob.month in days31):
+        curr_days = abs((31 - my_dob.day) + today.day)
     else:
-        curr_days = today.day - my_dob.day
+        curr_days = abs((28 - my_dob.day) + today.day)
     # zero out the time portion of the datetime object
     if(curr_months<1):
         temp_months = 1
@@ -52,14 +57,14 @@ def calc_age(dob: str, unit: str) -> str:
     else:
         temp_days = 0
         
-    my_full_dob = datetime(curr_years, curr_months, curr_days)
+    # curr_= datetime(curr_years, curr_months, curr_days)
 
     months = curr_years * 12 + curr_months
 
     if unit == "actual":
-        return str(my_full_dob.year - temp_years) + " years " + str(my_full_dob.month - temp_months) + " months and " + str(my_full_dob.day - temp_days) + " days old"
+        return str(curr_years - temp_years) + " years " + str(curr_months - temp_months) + " months and " + str(curr_days - temp_days) + " days old"
     elif unit == "years":
-        return str(my_full_dob.year - temp_years) + " years old"
+        return str(curr_years - temp_years) + " years old"
     elif unit == "months":
         return str(months - temp_months) + " months old"
     elif unit == "weeks":
@@ -94,24 +99,24 @@ def __units():
     """
     return ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
 
-
 # def main():
 #     years = [2001, 2010, 2021]
 #     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-#     days = [1, 7, 10, 12, 15, 18, 21, 24, 27]
+#     days = [i for i in range(1, 28)]
 #     times = ["12:00AM", "5:43PM", "11:30AM", "2:00PM", "7:20PM"]
-#     units = ['actual']#, 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
+#     units = ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
 #     try:
 #         for year in years:
 #             for month in months:
 #                 for day in days:
 #                     for time in times:
 #                         for unit in units:
-#                             dob = " ".join([str(month), str(day), str(year), time])
-#                             age = calc_age(dob, unit)
+#                             dob = " ".join([month, str(day), str(year), time])
+#                             calc_age(dob, unit)
+                            
 #     except ValueError as e:
-#         print("Error1: " + str(dob) + " " + unit + " " + str(e) + " " + str(age))
+#         assert False, f"ValueError: {e.args[0]} ({dob} {unit})"
 #     except Exception as e:
-#         print("Error2: " + str(dob) + " " + unit + " " + str(e) + " " + str(age))
-    
-main()
+#         assert False, f"Exception: {e.args[0]} ({dob} {unit})"
+#     assert True
+# main()
