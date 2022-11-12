@@ -1,18 +1,19 @@
 import datetime
 from datetime import datetime
 
-
 def calc_age(dob: str, unit: str) -> str:
     """ 
     Given a date of birth, returns a conversion based on the unit desired. 
 
     The format of the dob should be %b %d %Y %I:%M%p (e.g., Jan 10 2000 12:00AM).
+
+    Note: This function may or may not account for leap years.
     """
 
     try:
         my_dob = datetime.strptime(str(dob), "%b %d %Y %I:%M%p")
     except ValueError:
-        return "Invalid date format"
+        raise Exception("Invalid date format")
 
     today = datetime.now()
     days30 = {4, 6, 9, 11}
