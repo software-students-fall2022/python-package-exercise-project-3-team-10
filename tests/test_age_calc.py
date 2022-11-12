@@ -34,10 +34,10 @@ class TestAgeCalc:
         assert actual == True, f"Expected {result} to be a different format!"
     
     def test_age_calc_no_exceptions(self):
-        years = [2001, 2010, 2021]
+        years = [2000, 2003, 2010, 2021]
         months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
                 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        days = [i for i in range(1, 28)]
+        days = [i for i in range(1, 35)]
         times = ["12:00AM", "5:43PM", "11:30AM", "2:00PM", "7:20PM"]
         units = ['actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
         try:
