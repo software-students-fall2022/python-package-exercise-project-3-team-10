@@ -7,8 +7,7 @@ name = "pypi"
 pytz = "*"
 pytest = "*"
 build = "*"
-converterpackageteam10 = {editable = true, path = "."}
-
+metricconverterteam10 = {editable = true, path = "."}
 
 [dev-packages]
 
