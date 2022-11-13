@@ -1,5 +1,5 @@
 import pytest
-from converterpackageteam10 import distance_converter
+from metricconverterteam10 import distance_converter
 
 class TestDistanceConverter:
     #This is the tolerance for the conversions. Since conversions will result in 

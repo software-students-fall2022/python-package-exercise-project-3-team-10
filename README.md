@@ -18,7 +18,7 @@ A little exercise to create a Python package, build it, test it, distribute it, 
 <!-- how a developer who wants to import your project into their own code can do so - include documentation for all functions in your package and a link to an example Python program that uses each of them. -->
 <!-- functions -->
 ## Package Name:
-* converterpackageteam10
+* metricconverterteam10
 
 ## Package content(functions):
 * age_converter, number_converter, time_zone_converter, distance_converter
@@ -30,7 +30,7 @@ $ pipenv shell
 ```
 > Install our package: <br>
 ```
-$ pipenv install converterpackageteam10
+$ pipenv install metricconverterteam10
 ```
 
 ## Possible imports
@@ -39,19 +39,19 @@ $ pipenv install converterpackageteam10
 $ python
 ```
 * You can now run: 
-* `from converterpackageteam10 import age_converter`
+* `from metricconverterteam10 import age_converter`
     * `age_converter.calc_age(dob: str, unit: str)`
         * dob: Date Of Birth (e.g., Jan 10 2000 12:00AM)
         * unit: The unit to convert into. Choices: 'actual', 'years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds'.
     * `age_converter.help()`
-* `from converterpackageteam10 import number_converter`
+* `from metricconverterteam10 import number_converter`
     * `number_converter.convert_number(toUnit: str, value: Any)`
         * toUnit: The unit to convert value into. Choices: 'binary', 'decimal', 'hexadecimal', 'octal'
         * value: The value to convert. It could be in binary, octal, decimal, or hexadecimal form.
-* `from converterpackageteam10 import time_zone_converter`
+* `from metricconverterteam10 import time_zone_converter`
     * `time_zone_converter.convert_timezone(code: str)`
         * code: the ISO Alpha 2 code of the country.
-* `from converterpackageteam10 import distance_converter`
+* `from metricconverterteam10 import distance_converter`
     * `distance_converter.allowed_distance_conversions()`
     * `distance_converter.convert_distance(num: float | int | str, unit1: str, unit2: str)`
         * num: A number that is convertible to a float value.
@@ -60,8 +60,8 @@ $ python
 
 
 ## Link to project:
-* Link to the Test PyPi project: [link](https://test.pypi.org/project/converterpackageteam10/)
-* Link to the actual PyPi project: [link](https://pypi.org/project/converterpackageteam10/)
+* Link to the Test PyPi project: [link](https://test.pypi.org/project/metricconverterteam10/)
+* Link to the actual PyPi project: [link](https://pypi.org/project/metricconverterteam10/)
 * Link to the documentation of the functions: [Code Examples](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10#code-examples)
 * Link to an example python program: [\_\_main\_\_.py](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-10/blob/main/__main__.py)
 
@@ -76,6 +76,19 @@ $ python
     ```
     $ cd python-package-exercise-project-3-team-10
     ```
+* Create python virtual environment
+    ```
+    python -m venv .venv
+    ```
+* Activate python virtual environment:
+    * On Mac:
+        ```
+        source .venv/bin/activate
+        ```
+    * On Windows:
+        ```
+        .venv/Scripts/activate.bat
+        ```
 * Install pipenv
     ```
     $ pip install pipenv
